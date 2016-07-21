@@ -11,7 +11,7 @@ docker-compose up
 
 Create InfluxDB database:
 ```
-curl -POST http://influxdb:8086/query --data-urlencode "q=CREATE DATABASE cassandra"
+curl -POST http://127.0.0.1:8086/query --data-urlencode "q=CREATE DATABASE cassandra"
 ```
 
 Add Grafana datasource:
