@@ -23,7 +23,7 @@ curl 'http://admin:admin@127.0.0.1:3000/api/datasources' -X POST -H 'Content-Typ
 
 `cassandra-influx` directory contains a `Dockerfile` based on standard Cassandra 3.7. Differences:
 * Includes InfluxDB reporting configuration
-* Includes `metrics-influxdb-1.1.7-SNAPSHOT.jar` (built from https://github.com/iZettle/dropwizard-metrics-influxdb/pull/48)
+* Includes `metrics-influxdb-1.1.7.jar`
 * Includes `reporter-config3-3.0.2-SNAPSHOT.jar` (built from https://github.com/addthis/metrics-reporter-config/pull/29)
 * Includes `reporter-config-base-3.0.2-SNAPSHOT.jar` (built from https://github.com/addthis/metrics-reporter-config/pull/29)
 * Removes older `reporter-config*` jars
