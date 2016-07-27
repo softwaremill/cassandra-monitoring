@@ -16,7 +16,10 @@ curl -POST http://127.0.0.1:8086/query --data-urlencode "q=CREATE DATABASE cassa
 
 Add Grafana datasource:
 ```
-curl 'http://admin:admin@127.0.0.1:3000/api/datasources' -X POST -H 'Content-Type: application/json;charset=UTF-8' --data-binary '{"name":"influx","type":"influxdb","url":"http://influxdb:8086","access":"proxy","isDefault":true,"database":"cassandra","user":"admin","password":"admin"}'
+curl 'http://admin:admin@127.0.0.1:3000/api/datasources' -X POST \
+-H 'Content-Type: application/json;charset=UTF-8' \
+--data-binary '{"name":"influx","type":"influxdb","url":"http://influxdb:8086",
+"access":"proxy","isDefault":true,"database":"cassandra","user":"admin","password":"admin"}'
 ```
 
 ## Details
@@ -32,6 +35,6 @@ curl 'http://admin:admin@127.0.0.1:3000/api/datasources' -X POST -H 'Content-Typ
 Docker Compose spawns 
 
 1. InfluxDB
-2. Such configured Cassandra
+2. Cassandra with configured reporting
 3. Grafana
 
