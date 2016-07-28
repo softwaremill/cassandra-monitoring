@@ -10,7 +10,6 @@ influxdb:
   tags:
     host: 'node1'
     env: 'prod'
-    sth: 'else'
   prefix: ''
   hosts:
   - host: 'influxdb'
