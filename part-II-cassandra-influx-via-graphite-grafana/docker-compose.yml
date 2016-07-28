@@ -1,0 +1,24 @@
+version: '2'
+services:
+  cassandra:
+    build: ./cassandra-influx-via-graphite
+    container_name: cassandra
+    ports:
+     - "9042:9042"
+    depends_on:
+     - influxdb
+  influxdb:
+    image: influxdb:0.13.0
+    container_name: influxdb
+    ports:
+    - "8083:8083"
+    - "8086:8086"
+    environment:
+      INFLUXDB_GRAPHITE_ENABLED: "true"
+  grafana:
+    image: grafana/grafana:3.1.0
+    container_name: grafana
+    ports:
+    - "3000:3000"
+    depends_on:
+    - influxdb
