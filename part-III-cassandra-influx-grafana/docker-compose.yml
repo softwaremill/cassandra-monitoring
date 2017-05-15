@@ -14,7 +14,7 @@ services:
     - "8083:8083"
     - "8086:8086"
   grafana:
-    image: grafana/grafana:3.1.0
+    image: grafana/grafana:3.1.1
     container_name: grafana
     ports:
     - "3000:3000"
